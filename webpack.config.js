@@ -4,9 +4,9 @@ const path = require('path');
 module.exports = {
     resolve : {
         alias : {
-            '@drive.views' : path.join(__dirname, 'resources/js/views'),
-            '@drive.components' : path.join(__dirname, 'resources/js/components'),
-            '@drive.helpers' : path.join(__dirname, 'resources/js/mixins/helpers')
+            '@js.views' : path.join(__dirname, 'resources/js/views'),
+            '@js.components' : path.join(__dirname, 'resources/js/components'),
+            '@js.helpers' : path.join(__dirname, 'resources/js/mixins/helpers')
         }
     }
 }
