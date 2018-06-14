@@ -1,5 +1,5 @@
 {
-    "name": "2017-drive-lilly-email-marketing-site",
+    "name": "rebz-clean-slate",
     "version": "1.0.0",
     "description": "...",
     "main": "index.js",
@@ -9,13 +9,8 @@
         "prod": "npm run production",
         "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+ssh://git@bitbucket.org/forcecommunications/drive-marketing-emails.git"
-    },
     "author": "",
     "license": "ISC",
-    "homepage": "https://bitbucket.org/forcecommunications/drive-marketing-emails#readme",
     "dependencies": {
         "lodash": "^4.17.4",
         "nprogress": "^0.2.0",
