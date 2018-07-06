@@ -1,1 +1,1 @@
-Vue.component("Navigation", require("./Navigation.vue"))
+// Vue.component("ComponentName", require("./Component.vue"))

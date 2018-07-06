@@ -12,19 +12,21 @@ mix
     .autoload({
         axios: "axios",
         vue: "Vue",
-        lodash: "_"
+        lodash: "_",
+        NProgress: "nprogress"
     })
     .extract([
         "lodash",
         "vue",
-        "vue-router"
+        "vue-router",
+        "nprogress"
     ])
     .webpackConfig({
         resolve : {
             alias : {
-                '@js.views' : path.join(__dirname, 'resources/assets/js/views'),
-                '@js.components' : path.join(__dirname, 'resources/assets/js/components'),
-                '@js.helpers' : path.join(__dirname, 'resources/assets/js/mixins/helpers')
+                '@views' : path.join(__dirname, 'resources/assets/js/views'),
+                '@components' : path.join(__dirname, 'resources/assets/js/components'),
+                '@helpers' : path.join(__dirname, 'resources/assets/js/mixins/helpers')
             }
         }
     })

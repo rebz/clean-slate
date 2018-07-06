@@ -1,10 +1,8 @@
 <template>
 
-    <header class="Header">
-
-        header / navigation
-
-    </header>
+    <nav>
+        nav
+    </nav>
 
 </template>
 
