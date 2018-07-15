@@ -1,11 +1,11 @@
-import Vue from "vue";
-import App from "@components/App.vue";
-import HomeRoutes from "@views/home/routes";
-import PageNotFound from "@components/PageNotFound.vue";
+import Vue from "vue"
+import App from "@components/App.vue"
+import HomeRoutes from "@views/home/routes"
+import PageNotFound from "@components/PageNotFound.vue"
 
-window.VueRouter = require("vue-router/dist/vue-router.common");
+window.VueRouter = require("vue-router/dist/vue-router.common")
 
-Vue.use(VueRouter);
+Vue.use(VueRouter)
 
 const router = new VueRouter({
     mode: "history",
@@ -47,4 +47,4 @@ router.beforeEach((to, from, next) => {
     next()
 })
 
-export default router;
+export default router

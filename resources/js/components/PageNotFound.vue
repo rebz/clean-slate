@@ -8,7 +8,7 @@
 
         <h1>Page not found</h1>
 
-        <router-link :to="{name: 'Home'}">
+        <router-link :to="{name: 'home'}">
             Return Home
         </router-link>
 
