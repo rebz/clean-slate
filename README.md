@@ -5,9 +5,17 @@ around how it is being built.
 ### Requirements
 * Node v8.11.3+
 
-### Installation & Getting Started
+### Setup
+1. Duplicate `.env-example` and save as `.env`
+1. Fill out the environment variables as needed
+
+### Installation
 ```js
 npm install     // Install Dependencies
+```
+
+### Getting Started
+```js
 npm run dev     // development mode
 npm run watch   // BrowserSync w/ Hot Reload in development mode
 npm run prod    // production mode
@@ -37,6 +45,9 @@ npm run prod    // production mode
     * Move PageNotFound into `./views/404`, or some other related folder
         * Keep `./components` for non-`./views` specific components. Use for FontAwesome, Froala, Select2, etc
 * Setup FontAwesome Vue Implemtnation
-    
-### Laravel Valet
-Inside the root directory you will find `LocalValetDriver.php` that will allow Vue Router to work correctly with Laravel Valet.  
+
+### Files
+* `LocalValetDriver.php` - Not required
+    * Located inside the root directory, this file will allow Vue Router to work correctly with Laravel Valet.  
+* `.nvmrc` - Not required
+    * Located inside the root directory, this file defines the Node version we should use. .nvmrc is part of the Node Version Manager package. 
