@@ -1,6 +1,9 @@
 import NProgress from 'nprogress'
 window.NProgress = NProgress
 
+import axios from 'axios'
+window.axios = axios
+
 axios.interceptors.request.use((config) => {
     NProgress.configure({
         easing: 'ease',

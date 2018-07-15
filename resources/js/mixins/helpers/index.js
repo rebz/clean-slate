@@ -1,3 +1,4 @@
+import Vue from "vue"
 import {isMobile, bodyClass, addBodyClass, removeBodyClass, slugify} from "./interface"
 
 /*

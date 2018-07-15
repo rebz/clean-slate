@@ -1,3 +1,5 @@
+import Vue from "vue"
+
 require("./mixins");
 
 import router from "./router";
