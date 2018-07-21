@@ -4,6 +4,6 @@ module.exports = function () {
     return new UglifyJSPlugin({
         cache: true,
         parallel: true,
-        sourceMap: true, // TODO - based off config, show sourcemaps when not in production, currently shows only in production
+        sourceMap: false, // TODO - based off config, show sourcemaps when not in production, currently shows only in production
     });
 };

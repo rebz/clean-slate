@@ -8,11 +8,10 @@ module.exports = function (config) {
         logo: './resources/images/favicon.png',
 
         // The prefix for all image files (might be a folder or a name)
-        prefix: 'icons-[hash]/',
+        prefix: 'icons/[hash]/',
 
         // Emit all stats of the generated icons
         emitStats: false,
-
         // The name of the json containing all favicon information
         statsFilename: 'iconstats-[hash].json',
 
@@ -31,17 +30,18 @@ module.exports = function (config) {
 
         // which icons should be generated (see https://github.com/haydenbleasel/favicons#usage)
         icons: {
-            android: true,
-            appleIcon: true,
-            appleStartup: true,
-            coast: false,
             favicons: true,
-            firefox: true,
-            opengraph: false,
-            twitter: true,
-            yandex: false,
 
-            windows: true
+            android: false,
+            appleIcon: false,
+
+            appleStartup: false,
+            coast: false,
+            firefox: false,
+            opengraph: false,
+            twitter: false,
+            yandex: false,
+            windows: false
         }
     });
 };

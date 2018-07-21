@@ -8,7 +8,7 @@ module.exports = (env, argv) => {
     const config = {
         mode: argv.mode,
         host: envConfig.APP_HOST,
-        appName: envConfig.APP_NAME || 'App Name',
+        appName: envConfig.APP_NAME || 'AppNameNotSpecified',
         root: path.resolve(__dirname),
         hmr: process.argv.includes("--hot"),
         isProduction: argv.mode === "production",
@@ -30,8 +30,8 @@ module.exports = (env, argv) => {
         output: {
             publicPath: "/",
             path: config.outputPath,
-            filename: `js/[name].js?[${config.hashType}]`,
-            chunkFilename: `js/[name].js?[${config.hashType}]`
+            filename: config.isProduction ? `js/[name].js?[${config.hashType}]` : `js/[name].js`,
+            chunkFilename: config.isProduction ? `js/[name].js?[${config.hashType}]` : `js/[name].js`
         },
         module: {
             noParse: /^(vue|vue-router|vuex|vuex-router-sync)$/,
@@ -50,7 +50,10 @@ module.exports = (env, argv) => {
             }),
             require(buildPath+"plugins/clean")(config),
             require(buildPath+"plugins/html")(config),
-            require(buildPath+"plugins/favicon")(config), // duplicate, abstract 1 into favicon, another for other, larger, icons
+
+            // duplicate, abstract 1 into favicon, another for other, larger, icons
+            // require(buildPath+"plugins/favicon")(config),
+
             require(buildPath+"plugins/vue")(config),
             require(buildPath+"plugins/cssExtract")(config),
             require(buildPath+"plugins/moduleConcatentation")(config),
