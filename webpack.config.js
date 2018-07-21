@@ -55,7 +55,9 @@ module.exports = (env, argv) => {
             // require(buildPath+"plugins/favicon")(config),
 
             require(buildPath+"plugins/vue")(config),
+
             require(buildPath+"plugins/cssExtract")(config),
+
             require(buildPath+"plugins/moduleConcatentation")(config),
             require(buildPath+"plugins/errors")(config),
             require(buildPath+"plugins/notifications")(config),

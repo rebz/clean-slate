@@ -6,7 +6,8 @@
     "scripts": {
         "dev": "webpack --mode development --progress --hide-modules",
         "watch": "webpack-dev-server --mode development --hot",
-        "prod": "webpack --mode production --no-progress --hide-modules"
+        "prod": "production",
+        "production": "webpack --mode production --no-progress --hide-modules"
     },
     "author": "",
     "license": "ISC",
@@ -52,5 +53,11 @@
         "webpack-cli": "^3.0.8",
         "webpack-dev-server": "^3.1.4",
         "webpack-notifier": "^1.6.0"
-    }
+    },
+    "browserslist": [
+        "last 2 version",
+        "iOS >= 9",
+        "> 1%",
+        "IE 11"
+    ]
 }
