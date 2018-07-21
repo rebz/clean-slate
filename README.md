@@ -32,12 +32,18 @@ npm run prod    // production mode
 
 ### TODO
 * Use a module bundler, instead of Laravel mix
-    * Switch to Webpack 4
-    * Browsersync w/ hot reload
+    - [ ] Switch to Webpack 4
+    - [X] Browsersync w/ hot reload
     * Generate index.html from template
     * Generate robots.txt from template
     * Generate Favicon from template
     * Generate iOS and Andriod App Screen Icons from template
+    * Generated CSS
+        * `npm run prod` 
+            * removes all comments, not just single line comments, but also block comments like: `/* css comment */`
+            * Consolidate styles where possible: [example](https://stackoverflow.com/a/46176755/865803)
+            * minify CSS
+            * uglify CSS
 * Project Cleanup
     * Render component, don't use <router-view> to load (reduce number of div containers)
     * Cleanup mixins structure

@@ -8,9 +8,9 @@ module.exports = function () {
             discardComments: {
                 removeAll: true,
             },
-        }
+        },
         // assetNameRegExp: /\.optimize\.css$/g,
-        // cssProcessor: require('cssnano'),
-        // canPrint: true
+        cssProcessor: require('cssnano'),
+        canPrint: true
     });
 };
