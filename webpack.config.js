@@ -8,7 +8,7 @@ module.exports = (env, argv) => {
     const config = {
         mode: argv.mode,
         host: envConfig.APP_HOST,
-        appName: envConfig.APP_NAME,
+        appName: envConfig.APP_NAME || 'App Name',
         root: path.resolve(__dirname),
         hmr: process.argv.includes("--hot"),
         isProduction: argv.mode === "production",
@@ -38,7 +38,6 @@ module.exports = (env, argv) => {
             rules: [
                 require(buildPath+"loaders/js")(config),
                 require(buildPath+"loaders/vue")(config),
-                require(buildPath+"loaders/json")(config),
                 require(buildPath+"loaders/scss")(config),
                 require(buildPath+"loaders/html")(config),
                 require(buildPath+"loaders/fonts")(config),
@@ -51,6 +50,7 @@ module.exports = (env, argv) => {
             }),
             require(buildPath+"plugins/clean")(config),
             require(buildPath+"plugins/html")(config),
+            require(buildPath+"plugins/favicon")(config), // duplicate, abstract 1 into favicon, another for other, larger, icons
             require(buildPath+"plugins/vue")(config),
             require(buildPath+"plugins/cssExtract")(config),
             require(buildPath+"plugins/moduleConcatentation")(config),

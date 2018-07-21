@@ -1,3 +1,4 @@
+// https://github.com/jantimon/html-webpack-plugin
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = function () {

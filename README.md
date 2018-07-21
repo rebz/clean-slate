@@ -35,9 +35,9 @@ npm run prod    // production mode
     * Switch to Webpack 4
     * Browsersync w/ hot reload
     * Generate index.html from template
-    * Load robots.txt
-    * Load favicon
-    * Load iOS and Andriod App Screen Icons
+    * Generate robots.txt from template
+    * Generate Favicon from template
+    * Generate iOS and Andriod App Screen Icons from template
 * Project Cleanup
     * Render component, don't use <router-view> to load (reduce number of div containers)
     * Cleanup mixins structure

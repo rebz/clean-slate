@@ -3,7 +3,6 @@ module.exports = function (config) {
         test: /\.js$/,
         exclude: /(node_modules)/,
         use: [
-            ...(!config.isProduction ? ["cache-loader"] : []),
             {
                 loader: "babel-loader",
             },
