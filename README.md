@@ -35,13 +35,15 @@ npm run prod    // production mode
     - [ ] Initial config will build resources folder; sass and js.
         - [ ] Parse ENV File or use default webpack config
         - [X] HTML Template
-        - [ ] Sass to CSS
+        - [X] Sass to CSS
         - [ ] ES6 + Vue transpiled ES5 
         - [ ] Browsersync w/ hot module reloading
-    * CSS
-        - [X] Initial config for processing Sass/Scss files
-        - [ ] Process `@import`
-        - [ ] Process `url()`
+    * CSS / Sass
+        - [X] Initial config
+            - [X] Extract to separate CSS file
+            - [X] Process Sass
+            - [X] Process `@import`
+            - [X] Process `url()`
         * `npm run dev` 
             - [ ] sourcemaps
         * `npm run watch` 
@@ -51,8 +53,15 @@ npm run prod    // production mode
             - [ ] Consolidate styles where possible: [example](https://stackoverflow.com/a/46176755/865803)
             - [ ] minify CSS
             - [ ] uglify CSS
-    * JavaScript
-        - [ ]  Initial Setup
+    * JavaScript / Vue
+        - [ ] Initial Setup
+            - [ ] Transpile to ES5
+            - [ ] Handle Vue Files
+            - [ ] Handle Vue Component Styles
+        * `npm run watch` 
+            - [ ] ...
+        * `npm run dev` 
+            - [ ] ...
         * `npm run prod` 
             - [ ] removes all comments
             - [ ] minify JS

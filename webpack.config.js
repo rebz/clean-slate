@@ -1,9 +1,23 @@
+/*
+ * TODO
+ *
+ * Copy Webpack Plugin - https://www.npmjs.com/package/copy-webpack-plugin
+ *
+ * Resolve URL Loader - https://www.npmjs.com/package/resolve-url-loader
+ *  Comes in handy if you use Sass or Less. It adds support for
+ *  relative imports to the environments.
+ *
+ */
+
 const parts = require('./webpack.parts')
 
 const path = require('path')
 
 // https://github.com/jantimon/html-webpack-plugin
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+// https://github.com/webpack-contrib/mini-css-extract-plugin
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
 
@@ -18,8 +32,7 @@ module.exports = {
     output: {
         publicPath: '/',
         path: path.resolve(__dirname, 'public'),
-        // filename: `js/[name].js?`,
-        // chunkFilename: `js/[name].js?`,
+        filename: 'js/[name].js'
     },
 
     plugins: [
@@ -27,6 +40,9 @@ module.exports = {
             title: "Webpack demo",
             template: "./resources/html/index.html"
         }),
+        new MiniCssExtractPlugin({
+            filename: "css/[name].css",
+        })
     ],
 
     devServer: {
@@ -49,5 +65,3 @@ module.exports = {
     },
 };
 
-// TODO - https://www.npmjs.com/package/copy-webpack-plugin
-// TODO - https://www.npmjs.com/package/resolve-url-loader comes in handy if you use Sass or Less. It adds support for relative imports to the environments.

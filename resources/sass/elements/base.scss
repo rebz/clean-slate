@@ -13,6 +13,8 @@ body {
     -webkit-font-smoothing: subpixel-antialiased;
 
     @include body();
+
+    background: url('/images/original.png');
 }
 
 body,
