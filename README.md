@@ -44,6 +44,7 @@ npm run prod    // production mode
             - [X] Process Sass
             - [X] Process `@import`
             - [X] Process `url()`
+            - [ ] Copy files from `./resources/images/public/` to `./public/images/`
         * `npm run dev` 
             - [ ] sourcemaps
         * `npm run watch` 
