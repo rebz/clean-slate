@@ -5,7 +5,7 @@ around how it is being built.
 ### Requirements
 * Node v8.11.3+
 
-### Setup
+### Setup (optional)
 1. Duplicate `.env-example` and save as `.env`
 1. Fill out the environment variables as needed
 
@@ -31,19 +31,29 @@ npm run prod    // production mode
 * Sass (BEM + ITCSS)
 
 ### TODO
-* Use a module bundler, instead of Laravel mix
-    - [X] Switch to Webpack 4
-    - [X] Browsersync w/ hot reload
-    - [X] Generate index.html from template
-    - [ ] Generate robots.txt from template
-    - [ ] Generate Favicon from template
-    - [ ] Generate iOS and Andriod App Screen Icons from template
-    * Generated CSS
+* Webpack 4
+    - [ ] Initial config will build resources folder; sass and js.
+        - [ ] Parse ENV File or use default webpack config
+        - [ ] HTML Template
+        - [ ] Sass to CSS
+        - [ ] ES6 + Vue transpiled ES5 
+        - [ ] Browsersync w/ hot module reloading
+    * CSS
+        - [ ] Initial config for processing Sass/Scss files
+        - [ ] Process `@import`
+        - [ ] Process `url()`
         * `npm run prod` 
             - [ ] removes all comments, not just single line comments, but also block comments like: `/* css comment */`
             - [ ] Consolidate styles where possible: [example](https://stackoverflow.com/a/46176755/865803)
             - [ ] minify CSS
             - [ ] uglify CSS
+    * JavaScript
+        - [ ]  Initial Setup
+    * Files
+        - [ ] Generate Favicon from template
+        - [ ] Generate iOS and Andriod App Screen Icons from template
+        - [ ] Generate index.html from template
+        - [ ] Generate robots.txt from template
 * Project Cleanup
     - [ ] Render component, don't use <router-view> to load (reduce number of div containers)
     - [ ] Cleanup mixins structure
