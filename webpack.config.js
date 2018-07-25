@@ -1,8 +1,23 @@
+const path = require('path')
 
 // https://github.com/jantimon/html-webpack-plugin
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
+
+    entry: {
+        app: [
+            path.join(__dirname, "resources/sass/app.scss"),
+        ],
+    },
+
+    output: {
+        publicPath: '/',
+        path: path.resolve(__dirname, 'public'),
+        filename: `js/[name].js?`,
+        chunkFilename: `js/[name].js?`,
+    },
+
     plugins: [
         new HtmlWebpackPlugin({
             title: "Webpack demo",
