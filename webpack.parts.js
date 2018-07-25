@@ -1,11 +1,11 @@
 // TODO - https://www.npmjs.com/package/fast-sass-loader
 // TODO - http://cssnext.io/
 // TODO - Question... why is a sourceMap key added to each loader? How do I control this between dev/watch/prod commands?
+// TODO - Question... when is it efficient to use `style-loader` over MiniCssExtractPlugin.loader?
 
 const autoprefixer = require("autoprefixer");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-// Output extracted CSS to a file
 exports.loadCSS = ({ include, exclude } = {}) => ({
     module: {
         rules: [
@@ -14,8 +14,8 @@ exports.loadCSS = ({ include, exclude } = {}) => ({
                 include,
                 exclude,
                 use: [
-                    // 'style-loader',
                     {
+                        // loader: 'style-loader'
                         loader: MiniCssExtractPlugin.loader
                     },
                     {
@@ -44,7 +44,12 @@ exports.loadCSS = ({ include, exclude } = {}) => ({
                         // TODO - learn more about https://www.npmjs.com/package/resolve-url-loader
                         loader: 'resolve-url-loader'
                     },
-                    'sass-loader'
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }
                 ]
             }
         ]
