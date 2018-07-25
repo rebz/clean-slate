@@ -34,14 +34,18 @@ npm run prod    // production mode
 * Webpack 4
     - [ ] Initial config will build resources folder; sass and js.
         - [ ] Parse ENV File or use default webpack config
-        - [ ] HTML Template
+        - [X] HTML Template
         - [ ] Sass to CSS
         - [ ] ES6 + Vue transpiled ES5 
         - [ ] Browsersync w/ hot module reloading
     * CSS
-        - [ ] Initial config for processing Sass/Scss files
+        - [X] Initial config for processing Sass/Scss files
         - [ ] Process `@import`
         - [ ] Process `url()`
+        * `npm run dev` 
+            - [ ] sourcemaps
+        * `npm run watch` 
+            - [ ] sourcemaps
         * `npm run prod` 
             - [ ] removes all comments, not just single line comments, but also block comments like: `/* css comment */`
             - [ ] Consolidate styles where possible: [example](https://stackoverflow.com/a/46176755/865803)
@@ -49,10 +53,14 @@ npm run prod    // production mode
             - [ ] uglify CSS
     * JavaScript
         - [ ]  Initial Setup
+        * `npm run prod` 
+            - [ ] removes all comments
+            - [ ] minify JS
+            - [ ] uglify JS
     * Files
         - [ ] Generate Favicon from template
         - [ ] Generate iOS and Andriod App Screen Icons from template
-        - [ ] Generate index.html from template
+        - [X] Generate index.html from template
         - [ ] Generate robots.txt from template
 * Project Cleanup
     - [ ] Render component, don't use <router-view> to load (reduce number of div containers)

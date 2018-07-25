@@ -1,3 +1,5 @@
+const parts = require('./webpack.parts')
+
 const path = require('path')
 
 // https://github.com/jantimon/html-webpack-plugin
@@ -11,11 +13,13 @@ module.exports = {
         ],
     },
 
+    ...parts.loadCSS(),
+
     output: {
         publicPath: '/',
         path: path.resolve(__dirname, 'public'),
-        filename: `js/[name].js?`,
-        chunkFilename: `js/[name].js?`,
+        // filename: `js/[name].js?`,
+        // chunkFilename: `js/[name].js?`,
     },
 
     plugins: [
@@ -44,3 +48,6 @@ module.exports = {
         open: true, // Open the page in browser
     },
 };
+
+// TODO - https://www.npmjs.com/package/copy-webpack-plugin
+// TODO - https://www.npmjs.com/package/resolve-url-loader comes in handy if you use Sass or Less. It adds support for relative imports to the environments.
