@@ -3,10 +3,6 @@
  *
  * Copy Webpack Plugin - https://www.npmjs.com/package/copy-webpack-plugin
  *
- * Resolve URL Loader - https://www.npmjs.com/package/resolve-url-loader
- *  Comes in handy if you use Sass or Less. It adds support for
- *  relative imports to the environments.
- *
  */
 
 const parts = require('./webpack.parts')

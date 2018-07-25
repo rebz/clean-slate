@@ -32,19 +32,19 @@ npm run prod    // production mode
 
 ### TODO
 * Webpack 4
-    - [ ] Initial config will build resources folder; sass and js.
+    - [ ] Initial Config
         - [ ] Parse ENV File or use default webpack config
         - [X] HTML Template
-        - [X] Sass to CSS
-        - [ ] ES6 + Vue transpiled ES5 
-        - [ ] Browsersync w/ hot module reloading
+        - [ ] CSS / Sass
+        - [ ] JavaScript + Vue
+        - [ ] Browsersync w/ HMR
+        - [ ] Files copied to `./public`
     * CSS / Sass
-        - [X] Initial config
+        - [X] Initial Config
             - [X] Extract to separate CSS file
             - [X] Process Sass
             - [X] Process `@import`
             - [X] Process `url()`
-            - [ ] Copy files from `./resources/images/public/` to `./public/images/`
         * `npm run dev` 
             - [ ] sourcemaps
         * `npm run watch` 
@@ -55,22 +55,24 @@ npm run prod    // production mode
             - [ ] minify CSS
             - [ ] uglify CSS
     * JavaScript / Vue
-        - [ ] Initial Setup
+        - [ ] Initial Config
             - [ ] Transpile to ES5
             - [ ] Handle Vue Files
             - [ ] Handle Vue Component Styles
-        * `npm run watch` 
-            - [ ] ...
         * `npm run dev` 
             - [ ] ...
-        * `npm run prod` 
+        * `npm run watch` 
+            - [ ] ...
+a        * `npm run prod` 
             - [ ] removes all comments
             - [ ] minify JS
             - [ ] uglify JS
     * Files
-        - [ ] Generate Favicon from template
+        - [ ] Initial Config
+            - [X] Generate index.html from template
+            - [ ] Generate Favicon from template
+            - [ ] Copy files from `./resources/images/public/` to `./public/images/`
         - [ ] Generate iOS and Andriod App Screen Icons from template
-        - [X] Generate index.html from template
         - [ ] Generate robots.txt from template
 * Project Cleanup
     - [ ] Render component, don't use <router-view> to load (reduce number of div containers)
