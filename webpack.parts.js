@@ -72,10 +72,21 @@ exports.images = ({ include, exclude } = {}) => {
                 loader: "url-loader", // inlines images to base64
                 options: {
                     fallback: 'file-loader', // fallback to file loader if above `limit`
-                    name: "images/[name].[ext]?[hash]",
+                    name: "images/[name].[ext]?[hash:8]",
                     limit: 12000 // <8kb
                 }
             }
         ]
+    }
+}
+
+exports.fonts = () => {
+    return {
+        test: /\.(woff|woff2|ttf|eot|svg|otf)$/,
+        loader: "file-loader",
+        options: {
+            limit: 4096,
+            name: "fonts/[name].[ext]?[hash:8]",
+        },
     }
 }

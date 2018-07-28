@@ -26,6 +26,7 @@ module.exports = {
     module: {
         rules: [
             parts.css(),
+            parts.fonts(), // TODO - Test that fonts are actually being loaded...
             parts.images(),
         ],
     },
