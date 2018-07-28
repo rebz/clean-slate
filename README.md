@@ -66,7 +66,17 @@ npm run prod    // production mode
 a        * `npm run prod` 
             - [ ] removes all comments
             - [ ] minify JS
-            - [ ] uglify JS
+            - [ ] uglify JS       
+    * Image Handling
+        - [ ] Convert and inline small images to Base64... (<8kb?)
+        - [ ] ...copy to build 
+        - [ ] ...compress - [image-webpack-loader](https://github.com/tcoopman/image-webpack-loader)
+        * `npm run dev` 
+            - [ ] ...
+        * `npm run watch` 
+            - [ ] ...
+a        * `npm run prod` 
+            - [ ] ...
     * Files
         - [ ] Initial Config
             - [X] Generate index.html from template

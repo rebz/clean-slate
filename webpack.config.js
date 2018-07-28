@@ -23,7 +23,12 @@ module.exports = {
         ],
     },
 
-    ...parts.loadCSS(),
+    module: {
+        rules: [
+            parts.css(),
+            parts.images(),
+        ],
+    },
 
     output: {
         publicPath: '/',
