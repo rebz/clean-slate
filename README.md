@@ -63,7 +63,7 @@ npm run prod    // production mode
             - [ ] ...
         * `npm run watch` 
             - [ ] ...
-a        * `npm run prod` 
+        * `npm run prod` 
             - [ ] removes all comments
             - [ ] minify JS
             - [ ] uglify JS       
@@ -75,8 +75,10 @@ a        * `npm run prod`
             - [ ] ...
         * `npm run watch` 
             - [ ] ...
-a        * `npm run prod` 
+        * `npm run prod` 
             - [ ] ...
+    * Other
+        - [ ] Resolve Aliases like `@mixins` and `@views`
     * Files
         - [ ] Initial Config
             - [X] Generate index.html from template

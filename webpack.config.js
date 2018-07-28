@@ -19,12 +19,15 @@ module.exports = {
 
     entry: {
         app: [
+            path.join(__dirname, "resources/js/app.js"),
             path.join(__dirname, "resources/sass/app.scss"),
         ],
     },
 
     module: {
         rules: [
+            parts.js(),
+            parts.vue(),
             parts.css(),
             parts.fonts(), // TODO - Test that fonts are actually being loaded...
             parts.images(),

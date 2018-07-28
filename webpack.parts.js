@@ -73,7 +73,7 @@ exports.images = ({ include, exclude } = {}) => {
                 options: {
                     fallback: 'file-loader', // fallback to file loader if above `limit`
                     name: "images/[name].[ext]?[hash:8]",
-                    limit: 12000 // <8kb
+                    limit: 12000 // <12kb
                 }
             }
         ]
@@ -86,7 +86,55 @@ exports.fonts = () => {
         loader: "file-loader",
         options: {
             limit: 4096,
-            name: "fonts/[name].[ext]?[hash:8]",
+            name: "fonts/[name].[ext]?[hash:8]"
         },
+    }
+}
+
+exports.js = () => {
+
+    /*
+     *  Package:        babel-core
+     *  Description:    contains the Node API and require hook
+     *  Docs:           https://babeljs.io/docs/en/babel-core
+     */
+
+    /*
+     *  Package:        babel-loader
+     *  Description:    allows transpiling of JavaScript files using Babel and Webpack
+     *  Docs:           https://github.com/babel/babel-loader
+     */
+
+    /*
+     *  Package:        babel-plugin-syntax-dynamic-import
+     *  Description:    allows for parsing of `import()`
+     *  Docs:           https://babeljs.io/docs/en/next/babel-plugin-syntax-dynamic-import.html
+     */
+
+    /*
+     *  Package:        babel-preset-env
+     *  Description:    configure/target rules for presets
+     *  Docs:           https://babeljs.io/docs/en/next/babel-preset-env.html
+     */
+
+    return {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: [
+            {
+                loader: "babel-loader"
+            }
+        ],
+    }
+}
+
+exports.vue = () => {
+    return {
+        test: /\.vue$/,
+        use: [
+            {
+                loader: 'vue-loader'
+            }
+        ]
     }
 }
