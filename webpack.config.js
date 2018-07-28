@@ -50,6 +50,19 @@ module.exports = {
         })
     ],
 
+    resolve: {
+        // TODO - Learn more about `resolve`, https://webpack.js.org/configuration/resolve/
+        extensions: [".js", ".vue", ".json"],
+        alias: {
+            "@resources": path.join(__dirname, "resources"),
+            "@views": path.join(__dirname, "resources/js/views"),
+            "@components": path.join(__dirname, "resources/js/components"),
+            "@mixins": path.join(__dirname, "resources/js/mixins"),
+            "@store": path.join(__dirname, "resources/js/store"),
+            "@router": path.join(__dirname, "resources/js/router"),
+        },
+    },
+
     devServer: {
         // Display only errors to reduce the amount of output.
         stats: "errors-only",

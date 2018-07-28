@@ -113,8 +113,9 @@ exports.js = () => {
 
     /*
      *  Package:        babel-preset-env
-     *  Description:    configure/target rules for presets
+     *  Description:    enables the required plugins based on the optional environment definition passed to it
      *  Docs:           https://babeljs.io/docs/en/next/babel-preset-env.html
+     *  Requires:       .babelrc
      */
 
     return {
