@@ -15,6 +15,13 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 // https://github.com/webpack-contrib/mini-css-extract-plugin
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
+// https://vue-loader.vuejs.org/options.html#transformasseturls
+const { VueLoaderPlugin } = require("vue-loader");
+
+module.exports = function() {
+
+};
+
 module.exports = {
 
     entry: {
@@ -45,6 +52,7 @@ module.exports = {
             title: "Webpack demo",
             template: "./resources/html/index.html"
         }),
+        new VueLoaderPlugin(), // TODO - Options, https://vue-loader.vuejs.org/options.html#transformasseturls
         new MiniCssExtractPlugin({
             filename: "css/[name].css",
         })
