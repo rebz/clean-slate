@@ -55,7 +55,6 @@ exports.css = ({ include, exclude } = {}) => {
     }
 }
 
-
 exports.images = ({ include, exclude } = {}) => {
     return {
         test: /\.(jpg|png)$/,
@@ -63,11 +62,18 @@ exports.images = ({ include, exclude } = {}) => {
         // exclude,
         use: [
             {
+            // TODO - Research other URL/Image Loaders; possibly don't use the `url-loader`.
+            // TODO - Possible addition/replacement... https://github.com/tcoopman/image-webpack-loader
+            // TODO - Compression... https://github.com/vanwagonet/img-loader
+            /*
+             * Regarding CSS, it will only affect images referenced via a relative path
+             * Images with an absolute path will be ignored
+             */
                 loader: "url-loader", // inlines images to base64
                 options: {
-                    fallback: 'file-loader',
-                    name: "images/[name].[hash].[ext]",
-                    limit: 90000 // <8kb
+                    fallback: 'file-loader', // fallback to file loader if above `limit`
+                    name: "images/[name].[ext]?[hash]",
+                    limit: 12000 // <8kb
                 }
             }
         ]
