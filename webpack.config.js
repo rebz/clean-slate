@@ -6,7 +6,8 @@ module.exports = {
 
     entry: {
         app: [
-            // path.join(__dirname, "resources/js/app.js"),
+            path.join(__dirname, "resources/js/app.js"),
+            // path.join(__dirname, "resources/js/main.js"),
             path.join(__dirname, "resources/sass/app.scss"),
         ],
     },
@@ -37,6 +38,7 @@ module.exports = {
     resolve: {
         extensions: [".js", ".vue", ".json"],
         alias: {
+            "vue$": "vue/dist/vue.esm.js", // TODO - Better understand why this is required.
             "@resources": path.join(__dirname, "resources"),
             "@views": path.join(__dirname, "resources/js/views"),
             "@components": path.join(__dirname, "resources/js/components"),
