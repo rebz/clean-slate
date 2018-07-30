@@ -15,13 +15,12 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 exports.vue = () => {
-    // TODO - Options
-    return new VueLoaderPlugin()
+    return new VueLoaderPlugin() // TODO - Options
 }
 
-exports.html = () => {
+exports.html = (config) => {
     return new HtmlWebpackPlugin({
-        title: "Webpack demo",
+        title: config.appName || 'HtmlWebpackPlugin App Name',
         template: "./resources/html/index.html"
     })
 }

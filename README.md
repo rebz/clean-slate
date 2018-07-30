@@ -34,9 +34,10 @@ npm run prod    // production mode
 * Webpack 4
     - [ ] Initial Config
         - [ ] Parse ENV File or use default webpack config
+        - [X] Aliases
         - [X] HTML Template
-        - [ ] CSS / Sass
-        - [ ] JavaScript + Vue
+        - [X] CSS / Sass
+        - [X] JavaScript + Vue
         - [ ] Browsersync w/ HMR
         - [ ] Files copied to `./public`
     * CSS / Sass
@@ -56,8 +57,8 @@ npm run prod    // production mode
             - [ ] uglify CSS
     * JavaScript / Vue
         - [ ] Initial Config
-            - [ ] Transpile to ES5
-            - [ ] Handle Vue Files
+            - [X] Transpile to ES5
+            - [X] Handle Vue Files
             - [ ] Handle Vue Component Styles
         * `npm run dev` 
             - [ ] ...
@@ -66,7 +67,7 @@ npm run prod    // production mode
         * `npm run prod` 
             - [ ] removes all comments
             - [ ] minify JS
-            - [ ] uglify JS       
+            - [ ] uglify JS
     * Image Handling
         - [ ] Convert and inline small images to Base64... (<8kb?)
         - [ ] ...copy to build 
@@ -78,12 +79,12 @@ npm run prod    // production mode
         * `npm run prod` 
             - [ ] ...
     * Other
-        - [ ] Resolve Aliases like `@mixins` and `@views`
+        - [X] Resolve Aliases like `@mixins` and `@views`
     * Files
         - [ ] Initial Config
             - [X] Generate index.html from template
             - [ ] Generate Favicon from template
-            - [ ] Copy files from `./resources/images/public/` to `./public/images/`
+            - [X] Copy files from `./resources/images/public/` to `./public/images/`
         - [ ] Generate iOS and Andriod App Screen Icons from template
         - [ ] Generate robots.txt from template
 * Project Cleanup
