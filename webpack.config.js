@@ -1,43 +1,13 @@
-/*
- * TODO
- *
- * Copy Webpack Plugin - https://www.npmjs.com/package/copy-webpack-plugin
- *
- */
-
-const parts = require('./webpack.parts')
-
 const path = require('path')
-
-// https://github.com/jantimon/html-webpack-plugin
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-
-// https://github.com/webpack-contrib/mini-css-extract-plugin
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-
-// https://vue-loader.vuejs.org/options.html#transformasseturls
-const { VueLoaderPlugin } = require("vue-loader");
-
-module.exports = function() {
-
-};
+const loaders = require('./webpack.loaders')
+const plugins = require('./webpack.plugins')
 
 module.exports = {
 
     entry: {
         app: [
-            path.join(__dirname, "resources/js/app.js"),
+            // path.join(__dirname, "resources/js/app.js"),
             path.join(__dirname, "resources/sass/app.scss"),
-        ],
-    },
-
-    module: {
-        rules: [
-            parts.js(),
-            parts.vue(),
-            parts.css(),
-            parts.fonts(), // TODO - Test that fonts are actually being loaded...
-            parts.images(),
         ],
     },
 
@@ -47,19 +17,24 @@ module.exports = {
         filename: 'js/[name].js'
     },
 
+    module: {
+        rules: [
+            loaders.js(),
+            loaders.vue(),
+            loaders.css(),
+            loaders.fonts(),
+            loaders.images()
+        ]
+    },
+
     plugins: [
-        new HtmlWebpackPlugin({
-            title: "Webpack demo",
-            template: "./resources/html/index.html"
-        }),
-        new VueLoaderPlugin(), // TODO - Options, https://vue-loader.vuejs.org/options.html#transformasseturls
-        new MiniCssExtractPlugin({
-            filename: "css/[name].css",
-        })
+        plugins.html(),
+        plugins.vue(),
+        plugins.cssExtract()
     ],
 
+    // TODO - Learn more about `resolve`, https://webpack.js.org/configuration/resolve/
     resolve: {
-        // TODO - Learn more about `resolve`, https://webpack.js.org/configuration/resolve/
         extensions: [".js", ".vue", ".json"],
         alias: {
             "@resources": path.join(__dirname, "resources"),

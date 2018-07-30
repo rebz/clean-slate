@@ -4,6 +4,7 @@
 // TODO - Question... when is it efficient to use `style-loader` over MiniCssExtractPlugin.loader?
 
 const autoprefixer = require("autoprefixer");
+
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 exports.css = ({ include, exclude } = {}) => {
@@ -80,6 +81,7 @@ exports.images = ({ include, exclude } = {}) => {
     }
 }
 
+// TODO - Test that fonts are actually being loaded...
 exports.fonts = () => {
     return {
         test: /\.(woff|woff2|ttf|eot|svg|otf)$/,
