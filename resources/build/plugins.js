@@ -21,7 +21,10 @@ exports.vue = () => {
 exports.html = (config) => {
     return new HtmlWebpackPlugin({
         title: config.appName || 'HtmlWebpackPlugin App Name',
-        template: "./resources/html/index.html"
+        template: "./resources/html/index.html",
+        meta: {
+            viewport: 'width=device-width, initial-scale=1, user-scalable=0'
+        }
     })
 }
 
