@@ -23,6 +23,44 @@ module.exports = () => {
             filename: 'js/[name].js'
         },
 
+        /*
+         *  Sourcemaps
+         *  https://survivejs.com/webpack/building/source-maps/
+         *  key: devtool
+         *  values:
+         *      Inline Source Map Types
+         *          eval                            = generates code in which each module is wrapped within an eval function
+         *          cheap-eval-source-map           = goes a step further and it includes base64 encoded version of the code as a data url. The result contains only line data while losing column mappings
+         *          cheap-module-eval-source-map    = same idea, except with higher quality and lower performance
+         *          eval-source-map                 = is the highest quality option of the inline options. It's also the slowest one as it emits the most data
+         *      Separate Source Map Types
+         *          cheap-source-map                = is similar to the cheap options above. The result is going to miss column mappings. Also, source maps from loaders, such as css-loader, are not going to be used
+         *          cheap-module-source-map         = is the same as previous except source maps from loaders are simplified to a single mapping per line. It yields the following output in this case
+         *          hidden-source-map               = hidden-source-map is the same as source-map except it doesn't write references to the source maps to the source files. If you don't want to expose source maps to development tools directly while you wish proper stack traces, this is handy.
+         *          nosources-source-map            = creates a source map without sourcesContent in it. You still get stack traces, though. The option is useful if you don't want to expose your source code to the client
+         *          source-map                      = slowest and highest quality option of them all, good for production
+         */
+        devtool: "eval",
+
+        optimization: {
+            splitChunks: {
+                cacheGroups: {
+                    vendors: {
+                        name: "vendors",
+                        test: /[\\/]node_modules[\\/]/,
+                        priority: -10,
+                        chunks: "all",
+                        enforce: true
+                    },
+                    default: {
+                        minChunks: 2,
+                        priority: -20,
+                        reuseExistingChunk: true
+                    }
+                }
+            }
+        },
+
         module: {
             rules: [
                 loaders.js(),
