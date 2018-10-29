@@ -1,4 +1,4 @@
-import {isMobile, bodyClass, addBodyClass, removeBodyClass, slugify} from "./interface"
+import {isMobile, bodyClass, addBodyClass, removeBodyClass, slugify} from "@mixins/interface"
 
 /*
  Single Event HUb
