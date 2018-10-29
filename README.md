@@ -15,7 +15,11 @@ Inside the root directory you will find `LocalValetDriver.php` that will allow V
 1. Axios
 1. Lodash
 1. FontAwesome Pro (JS+SVG, npm + component)
-    1. I use a .npmrc file with my font-awesome pro key in it, provided without the key
+    1. I use a .npmrc file in the project root with my font-awesome pro auth key in it
+    1. ```
+       @fortawesome:registry=https://npm.fontawesome.com
+       //npm.fontawesome.com/:_authToken=
+       ```     
 1. browser sync
 1. nprogress (progress bar for http requests)
 1. store (for localstorage)
