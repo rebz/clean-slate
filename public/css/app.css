@@ -25,7 +25,7 @@
  */
 
 /*
- *  Variables used for mixins
+ *  Breakpoints for Responsive Design
  */
 
 /*
@@ -59,22 +59,6 @@
 /*
  *  Global mixins and functions.
  */
-
-/* Gradient: Top to Bottom */
-
-.wrap {
-  *zoom: 1;
-}
-
-.wrap:before,
-.wrap:after {
-  content: ' ';
-  display: table;
-}
-
-.wrap:after {
-  clear: both;
-}
 
 /*
  *  Reset Stylesheets, first layer of CSS.
@@ -399,6 +383,7 @@ input[type="radio"] {
 
 input[type="search"] {
   -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 
@@ -477,7 +462,6 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-font-smoothing: subpixel-antialiased;
   background-color: none;
-  background: url(/images/favicon.png?c500a380) 0 0 repeat;
 }
 
 body,
@@ -536,50 +520,11 @@ hr {
  *  are often composed of Objects and Components.
  */
 
-.Header {
-  border-radius: 20px;
-}
-
-.example {
-  display: grid;
-  transition: all .5s;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  background: linear-gradient(to bottom, white, black);
-}
-
-.a {
-  color: #fff;
-}
-
-.b {
-  color: white;
-}
-
-.c {
-  color: #ffffff;
-}
-
-.d {
-  color: white;
-}
-
-.e {
-  color: white;
-}
-
 /*
  *  Helper classes with ability to override
  *  anything which goes before in the
  *  triangle, eg. hide helper class.
  */
-
-.wrap {
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
 .al {
   text-align: left;
@@ -624,4 +569,8 @@ hr {
   width: 100%;
 }
 
+.Wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 

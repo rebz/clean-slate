@@ -22,10 +22,10 @@ mix
     .webpackConfig({
         resolve : {
             alias : {
-                '@views' : path.join(__dirname, 'resources/assets/js/views'),
-                '@directives' : path.join(__dirname, 'resources/assets/js/directives'),
-                '@components' : path.join(__dirname, 'resources/assets/js/components'),
-                '@mixins' : path.join(__dirname, 'resources/assets/js/mixins')
+                '@views' : path.join(__dirname, 'resources/js/views'),
+                '@directives' : path.join(__dirname, 'resources/js/directives'),
+                '@components' : path.join(__dirname, 'resources/js/components'),
+                '@mixins' : path.join(__dirname, 'resources/js/mixins')
             }
         }
     })

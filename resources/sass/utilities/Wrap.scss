@@ -1,5 +1,4 @@
 .Wrap {
-    max-width: $body__width--desktop;
+    max-width: $desktop;
     margin: 0 auto;
-    @extend %clearfix;
 }
