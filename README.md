@@ -13,10 +13,7 @@
 - [ ] ESLint
 - [ ] Prettier
 - [ ] Render component, don't use <router-view>
-- [ ] Cleanup mixins structure
-- [ ] Move Navigation/App Components into `./views/layouts`
-- [ ] Move PageNotFound into `./views/404`, or some other related folder
-- [ ] 
+- [ ] Cleanup initial mixins setup
 
 ### Laravel Valet for MacOS
 Inside the root directory you will find `LocalValetDriver.php` that will allow Vue Router to work with Laravel Valet by referencing an HTML file and allowing requests.
