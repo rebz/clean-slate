@@ -1,7 +1,7 @@
 {
-    "name": "rebz-clean-slate",
-    "version": "1.0.0",
-    "description": "...",
+    "name": "vue-clean-slate",
+    "version": "1.0.1",
+    "description": "Personal starter template for Vue projects",
     "main": "index.js",
     "scripts": {
         "dev": "webpack --mode development --progress --hide-modules",
@@ -9,14 +9,19 @@
         "prod": "production",
         "production": "webpack --mode production --no-progress --hide-modules"
     },
-    "author": "",
+    "author": "Chris Johnson <chris@rebzmedia.com>",
     "license": "ISC",
     "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.17",
+        "@fortawesome/pro-light-svg-icons": "^5.8.1",
+        "@fortawesome/pro-regular-svg-icons": "^5.8.1",
+        "@fortawesome/pro-solid-svg-icons": "^5.8.1",
+        "@fortawesome/vue-fontawesome": "^0.1.6",
         "axios": "^0.18.0",
         "nprogress": "^0.2.0",
-        "vue": "^2.5.16",
-        "vue-router": "^3.0.1",
-        "vuex": "^3.0.1"
+        "vue": "^2.6.10",
+        "vue-router": "^3.0.2",
+        "vuex": "^3.1.0"
     },
     "devDependencies": {
         "autoprefixer": "^8.6.5",

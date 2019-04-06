@@ -73,6 +73,20 @@ module.exports = (env, argv) => {
                 "@mixins": path.join(__dirname, jsPath+"mixins"),
                 "@store": path.join(__dirname, jsPath+"store"),
                 "@views": path.join(__dirname, jsPath+"views")
+
+
+                '@': path.join(__dirname, jsPath),
+                '@api' : path.join(__dirname, jsPath+'/api'),
+                '@classes' : path.join(__dirname, jsPath+'/classes'),
+                '@components' : path.join(__dirname, jsPath+'/components'),
+                '@config' : path.join(__dirname, jsPath+'/config'),
+                '@directives' : path.join(__dirname, jsPath+'/directives'),
+                '@helpers': path.join(__dirname, jsPath+'/helpers'),
+                '@mixins' : path.join(__dirname, jsPath+'/mixins'),
+                '@models' : path.join(__dirname, jsPath+'/models'),
+                '@router' : path.join(__dirname, jsPath+'/router'),
+                '@store': path.join(__dirname, jsPath+'/store'),
+                '@views' : path.join(__dirname, jsPath+'/views')
             },
         },
         stats: require(buildPath+"stats")(config),
