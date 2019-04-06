@@ -1,7 +1,7 @@
 import Vue from "vue"
-import App from "@components/App.vue"
+import App from "@components/App"
 import HomeRoutes from "@views/home/routes"
-import PageNotFound from "@components/PageNotFound.vue"
+import PageNotFound from "@views/errors/PageNotFound"
 
 window.VueRouter = require("vue-router/dist/vue-router.common")
 

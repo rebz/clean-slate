@@ -1,4 +1,4 @@
-require("./mixins");
+require('@mixins/global')
 
 import router from "./router";
 import store from "./store";

@@ -1,7 +1,9 @@
 <template>
 
-    <nav>
-        nav
+    <nav class="Navigation">
+
+        Navigation.vue
+
     </nav>
 
 </template>

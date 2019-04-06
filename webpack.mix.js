@@ -6,36 +6,46 @@ let env = process.env
 
 const mix = require('laravel-mix')
 
-mix
+mix.setPublicPath('public/')
     .js('resources/js/app.js', 'public/js/app.js')
     .sass('resources/sass/app.scss', 'public/css/app.css')
     .autoload({
         axios: "axios",
-        vue: "Vue",
-        lodash: "_",
-        NProgress: "nprogress"
+        nprogress: "nprogress",
+        vue: "Vue"
     })
     .extract([
-        "lodash",
+        "axios",
+        "nprogress",
         "vue",
         "vue-router",
-        "nprogress"
+        "vuex"
     ])
     .webpackConfig({
         resolve : {
             alias : {
-                '@views' : path.join(__dirname, 'resources/assets/js/views'),
-                '@components' : path.join(__dirname, 'resources/assets/js/components'),
-                '@helpers' : path.join(__dirname, 'resources/assets/js/mixins/helpers')
+                '@': path.join(__dirname, 'resources/js'),
+                '@api' : path.join(__dirname, 'resources/js/api'),
+                '@classes' : path.join(__dirname, 'resources/js/classes'),
+                '@components' : path.join(__dirname, 'resources/js/components'),
+                '@config' : path.join(__dirname, 'resources/js/config'),
+                '@directives' : path.join(__dirname, 'resources/js/directives'),
+                '@helpers': path.join(__dirname, 'resources/js/helpers'),
+                '@mixins' : path.join(__dirname, 'resources/js/mixins'),
+                '@models' : path.join(__dirname, 'resources/js/models'),
+                '@router' : path.join(__dirname, 'resources/js/router'),
+                '@store': path.join(__dirname, 'resources/js/store'),
+                '@views' : path.join(__dirname, 'resources/js/views')
             }
         }
     })
 
 if (mix.inProduction()) {
-    mix.version()
-    mix.disableNotifications()
+    mix.sourceMaps(false)
+        .version()
+        .disableNotifications()
 } else {
-    mix.sourceMaps()
+    mix.sourceMaps(true)
         .browserSync({
             open: 'external',
             host: env.APP_DOMAIN,
