@@ -29,4 +29,3 @@ Using [Node Version Manager](https://github.com/creationix/nvm) you can jump bet
 1. Axios
 1. Browser Sync
 1. Laravel Mix
->>>>>>> master
