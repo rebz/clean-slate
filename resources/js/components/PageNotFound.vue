@@ -3,7 +3,7 @@
     <div class="PageNotFound">
 
         <span>
-            <i class="fa fa-sitemap" aria-hidden="true"></i>
+            <fa-icon :icon="['fal', 'sitemap']"></fa-icon>
         </span>
 
         <h1>Page not found</h1>

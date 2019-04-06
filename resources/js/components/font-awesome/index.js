@@ -3,29 +3,29 @@ import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
 
 // Light SVG Icons
 import {
-    faArchive,
+    faSitemap,
 } from '@fortawesome/pro-light-svg-icons'
 
 // Regular SVG Icons
 import {
-    faArchive as faArchiveRegular,
+    faSitemap as faSitemapRegular,
 
 } from '@fortawesome/pro-regular-svg-icons'
 
 // Solid SVG Icons
 import {
-    faArchive as faArchiveSolid,
+    faSitemap as faSitemapSolid,
 } from '@fortawesome/pro-solid-svg-icons'
 
 library.add(
-    faArchive,
-    faArchiveRegular,
-    faArchiveSolid,
+    faSitemap,
+    faSitemapRegular,
+    faSitemapSolid,
 )
 
-// <fa-icon :icon="['fal', 'archive']"></fa-icon> - Light
-// <fa-icon :icon="['far', 'archive']"></fa-icon> - Regular
-// <fa-icon :icon="['fas', 'archive']"></fa-icon> - Solid
+// <fa-icon :icon="['fal', 'sitemap']"></fa-icon> - Light
+// <fa-icon :icon="['far', 'sitemap']"></fa-icon> - Regular
+// <fa-icon :icon="['fas', 'sitemap']"></fa-icon> - Solid
 //              use 'fab' for Brands
 
 Vue.component('fa-icon', FontAwesomeIcon)

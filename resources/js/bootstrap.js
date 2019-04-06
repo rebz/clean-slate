@@ -1,22 +1,22 @@
-import NProgress from 'nprogress'
-window.NProgress = NProgress
+nprogress.configure({
+    easing: 'ease',
+    speed: 500,
+    showSpinner: false,
+})
 
 axios.interceptors.request.use((config) => {
-    NProgress.configure({
-        easing: 'ease',
-        speed: 500,
-        showSpinner: false,
-    })
-    NProgress.start()
-    NProgress.inc(0.3)
+    nprogress.start()
+    nprogress.inc(0.3)
     return config
 }, (error) => {
+    nprogress.done()
     return Promise.reject(error)
 })
 
 axios.interceptors.response.use((response) => {
-    NProgress.done()
+    nprogress.done()
     return response
 }, (error) => {
+    nprogress.done()
     return Promise.reject(error)
 })
